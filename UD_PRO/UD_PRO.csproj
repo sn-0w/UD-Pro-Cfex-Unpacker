@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49FEE1AD-390C-4FF0-BBF0-1C168BA386A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UD_PRO</RootNamespace>
+    <AssemblyName>UD_PRO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Attribute_KILLER__WINDOWS_FORMS_APP_.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="de4dot.blocks">
+      <HintPath>..\..\..\Desktop\anticfex\UD_PRO\de4dot.blocks.dll</HintPath>
+    </Reference>
+    <Reference Include="dnlib">
+      <HintPath>..\..\..\Desktop\anticfex\UD_PRO\dnlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute_KILLER__WINDOWS_FORMS_APP_\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attribute_KILLER__WINDOWS_FORMS_APP_\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute_KILLER__WINDOWS_FORMS_APP_\Program.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\antidebugger.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\antidumper.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\AntiTamper.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\AttributeRemover.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Class0.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Class1.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Class4.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Constants.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\ControlFlow.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\ControlFlowRun.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Invoke_Remover.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Lzma.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\MathsEquations.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Packer.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\ReferenceProxy.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\ResourcesDeobfuscator.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\StaticPacker.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\StaticStrings.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Struct0.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Struct1.cs" />
+    <Compile Include="Krawk_Unpacker\Protections\Struct3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="UD_PRO.Attribute_KILLER__WINDOWS_FORMS_APP_.Form1.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
